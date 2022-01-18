@@ -5,8 +5,8 @@
 1. [Build binaries](#build-binaries)
 
 ## Prerequisites
-- Vagrant
-- Virtualbox
+- [Vagrant](https://www.vagrantup.com/downloads)
+- [Virtualbox](https://www.virtualbox.org/)
 
 ## Running Vagrant
 Running and install the Vagrantbox:
@@ -40,7 +40,7 @@ Here you need to specify the options to fit your need:
 ```sh
 TARGET_OS=""                     # android/ios/linux/macos/windows
 TARGET_CPU=""                    # x86/x64/arm/arm64
-BUILD_ALL_TARGET_CPUS=""         # true/false - true will build ALL cpus for the given TARGET_OS in separate folders
+BUILD_ALL_TARGET_CPUS="false"    # true/false - true will build ALL cpus for the given TARGET_OS in separate folders
 PDFIUM_BRANCH="chromium/4837"    # Selected chromium branch to build binaries from.
 ```
 

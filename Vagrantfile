@@ -51,6 +51,7 @@ Vagrant.configure("2") do |config|
     cd /home/vagrant/vagrant_data
     git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
     echo "export PATH=~/vagrant_data/depot_tools:$PATH" >> ~/.bashrc
+    source ~/.bashrc
     git clone https://pdfium.googlesource.com/pdfium
     gclient config --unmanaged https://pdfium.googlesource.com/pdfium.git
 

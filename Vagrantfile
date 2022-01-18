@@ -36,9 +36,9 @@ Vagrant.configure("2") do |config|
     sudo apt-get install -y g++-aarch64-linux-gnu # Linux arm64 
     
     # Install python3.9 (required python >=3.8 for build script PDFium)
-    sudo add-apt-repository ppa:deadsnakes/ppa
-    sudo apt update
-    sudo apt install -y python3.9 python3.9-dev python3.9-venv
+    #sudo add-apt-repository ppa:deadsnakes/ppa
+    #sudo apt update
+    sudo apt-get install -y python3.9 python3.9-dev python3.9-venv
     echo "alias python3='/usr/bin/python3.9'" >> /home/vagrant/.bashrc
     
     # Install/upgrade libstdc++6
@@ -53,7 +53,7 @@ Vagrant.configure("2") do |config|
     echo "export PATH=/home/vagrant/vagrant_data/depot_tools:$PATH" >> /home/vagrant/.bashrc
     source /home/vagrant/.bashrc
     git clone https://pdfium.googlesource.com/pdfium
-    gclient config --unmanaged https://pdfium.googlesource.com/pdfium.git
+    /home/vagrant/vagrant_data/depot_tools/gclient config --unmanaged https://pdfium.googlesource.com/pdfium.git
 
   SHELL
 end

@@ -5,13 +5,9 @@ echo "target_os = [ '$TARGET_OS' ]" >> $VAGRANT_DATA_PATH/.gclient
 
 # Sync pdfium
 set -x # to see output from gclient
-gclient sync -r --no-history --shallow
+gclient sync -r "origin/$PDFIUM_BRANCH" --no-history --shallow --force
 set +x
 
-# Add gn args
-# cd $VAGRANT_DATA_PATH/pdfium
-# rm -rf $OUTPUT_DIR_NAME
-# gn gen $OUTPUT_DIR_NAME
-# cat $COMMON_GN_ARGS_FILE > $OUTPUT_DIR_NAME/args.gn
-# echo 'target_os = "$TARGET_OS"' >> $OUTPUT_DIR_NAME/args.gn
-# echo 'target_cpu = "$TARGET_CPU"' >> $OUTPUT_DIR_NAME/args.gn
+if [ $TARGET_OS == "android" ]; then
+    ./home/vagrant/vagrant_data/pdfium/build/install-build-deps-android.sh
+fi

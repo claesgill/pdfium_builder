@@ -1,0 +1,5 @@
+export VAGRANT_DATA_PATH="/home/$USER/vagrant_data"
+export SCRIPTS_PATH="$VAGRANT_DATA_PATH/scripts"
+export COMMON_GN_ARGS_FILE="$SCRIPTS_PATH/helpers/common_gn_args.txt"
+export GCLIENT_FILE="$SCRIPTS_PATH/helpers/gclient.txt"
+# export OUTPUT_DIR_NAME="out/$TARGET_OS-$TARGET_CPU"

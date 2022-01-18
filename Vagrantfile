@@ -38,8 +38,8 @@ Vagrant.configure("2") do |config|
     # Install python3.9 (required python >=3.8 for build script PDFium)
     sudo add-apt-repository ppa:deadsnakes/ppa
     sudo apt update
-    sudo apt install python3.9 python3.9-dev python3.9-venv
-    echo "alias python3='/usr/bin/python3.9'" >> ~/.bashrc
+    sudo apt install -y python3.9 python3.9-dev python3.9-venv
+    echo "alias python3='/usr/bin/python3.9'" >> /home/vagrant/.bashrc
     
     # Install/upgrade libstdc++6
     sudo add-apt-repository ppa:ubuntu-toolchain-r/test
@@ -50,7 +50,7 @@ Vagrant.configure("2") do |config|
     # Download & install depot_tools and PDFium
     cd /home/vagrant/vagrant_data
     git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
-    echo "export PATH=~/vagrant_data/depot_tools:$PATH" >> /home/vagrant/.bashrc
+    echo "export PATH=/home/vagrant/vagrant_data/depot_tools:$PATH" >> /home/vagrant/.bashrc
     source /home/vagrant/.bashrc
     git clone https://pdfium.googlesource.com/pdfium
     gclient config --unmanaged https://pdfium.googlesource.com/pdfium.git

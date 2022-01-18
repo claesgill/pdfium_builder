@@ -48,7 +48,7 @@ Vagrant.configure("2") do |config|
     sudo apt-get upgrade -y libstdc++6
 
     # Download & install depot_tools and PDFium
-    cd ~/vagrant_data
+    cd /home/vagrant/vagrant_data
     git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
     echo "export PATH=~/vagrant_data/depot_tools:$PATH" >> ~/.bashrc
     git clone https://pdfium.googlesource.com/pdfium

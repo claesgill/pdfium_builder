@@ -9,5 +9,5 @@ gclient sync -r "origin/$PDFIUM_BRANCH" --no-history --shallow --force
 set +x
 
 if [ $TARGET_OS == "android" ]; then
-    ./home/vagrant/vagrant_data/pdfium/build/install-build-deps-android.sh
+    /home/vagrant/vagrant_data/pdfium/build/install-build-deps-android.sh
 fi

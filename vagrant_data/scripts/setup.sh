@@ -10,4 +10,7 @@ set +x
 
 if [ $TARGET_OS == "android" ]; then
     /home/vagrant/vagrant_data/pdfium/build/install-build-deps-android.sh
+else
+    # TODO: True for all other builds???
+    # /home/vagrant/vagrant_data/pdfium/build/install-build-deps.sh
 fi

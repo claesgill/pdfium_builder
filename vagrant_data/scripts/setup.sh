@@ -14,3 +14,5 @@ else
     # TODO: True for all other builds???
     # /home/vagrant/vagrant_data/pdfium/build/install-build-deps.sh
 fi
+
+gclient runhooks

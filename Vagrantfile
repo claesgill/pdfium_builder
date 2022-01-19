@@ -34,6 +34,7 @@ Vagrant.configure("2") do |config|
     apt-get install -y ninja
     apt-get install -y g++-arm-linux-gnueabihf    # Linux arm
     sudo apt-get install -y g++-aarch64-linux-gnu # Linux arm64 
+    sudo apt-get install -y lsb-release
     
     # Install python3.9 (required python >=3.8 for build script PDFium)
     #sudo add-apt-repository ppa:deadsnakes/ppa
